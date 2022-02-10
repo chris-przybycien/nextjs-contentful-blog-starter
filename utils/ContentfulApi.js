@@ -424,6 +424,60 @@ export default class ContentfulApi {
               }
             }
           }
+          form {
+            formTitle
+            formDescription {
+              json
+              links {
+                entries {
+                  inline {
+                    sys {
+                      id
+                    }
+                    __typename
+                    ... on BlogPost {
+                      title
+                      slug
+                    }
+                  }
+                  block {
+                    sys {
+                      id
+                    }
+                    __typename
+                    ... on VideoEmbed {
+                      title
+                      embedUrl
+                    }
+                    ... on CodeBlock {
+                      description
+                      language
+                      code
+                    }
+                  }
+                }
+                assets {
+                  block {
+                    sys {
+                      id
+                    }
+                    url
+                    title
+                    width
+                    height
+                    description
+                  }
+                }
+              }
+            }
+            formFieldsCollection {
+              items {
+                title
+                placeholder
+              }
+            }
+            submitButton
+          }
         }
       }
     }`;

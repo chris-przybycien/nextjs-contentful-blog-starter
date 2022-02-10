@@ -60,4 +60,21 @@ export default css.global`
   .token.tag, .token.constant {
     color: #fc92b6 !important;
   }
+
+  form {
+    margin-top: -2rem;
+  }
+
+  input {
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  button[type="submit"] {
+    margin: 1rem 0 2rem 0;
+    width: 7rem;
+    height: 2rem;
+  }
 `;
