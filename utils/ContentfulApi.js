@@ -472,6 +472,9 @@ export default class ContentfulApi {
             }
             formFieldsCollection {
               items {
+                sys {
+                  id
+                }
                 title
                 placeholder
               }

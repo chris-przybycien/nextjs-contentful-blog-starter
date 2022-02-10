@@ -17,7 +17,10 @@ export default function Post(props) {
       {post.tags !== null && <Tags tags={post.tags} />}
       <h1 className={TypographyStyles.heading__h1}>{post.title}</h1>
       <RichTextPageContent richTextBodyField={post.body} renderH2Links={true} />
-      <Form formData={post.form}></Form>
+      { 
+        post.form &&
+        <Form formData={post.form}></Form>
+      }
       {post.author !== null && <Author author={post.author} />}
     </article>
   );
