@@ -42,7 +42,7 @@ export const Config = {
       slug: "/buildrss",
     },
     page: {
-      slug: "/[slug]",
+      slug: "/[customSlug]",
     },
     notFound: {
       url: SITE_URL,
