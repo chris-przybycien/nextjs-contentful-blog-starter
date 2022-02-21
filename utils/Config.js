@@ -41,6 +41,9 @@ export const Config = {
       url: `${SITE_URL}/buildrss`,
       slug: "/buildrss",
     },
+    page: {
+      slug: "/[slug]",
+    },
     notFound: {
       url: SITE_URL,
       slug: "/404",

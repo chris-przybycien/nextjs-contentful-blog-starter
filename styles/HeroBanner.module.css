@@ -15,7 +15,7 @@
 
 .heroBanner__overlay {
   background-color: var(--color-foreground);
-  opacity: 0.5;
+  opacity: 0;
   height: 100%;
   width: 100%;
   position: absolute;

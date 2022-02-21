@@ -11,7 +11,6 @@ export default function Form(props) {
             <form>
             {
                 formFieldsCollection.items.map(formField => {
-                    console.log(formField);
                     return <input 
                         placeholder={formField.placeholder} 
                         title={formField.title}

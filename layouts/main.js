@@ -4,11 +4,11 @@ import Footer from "@components/Footer";
 import PreviewBanner from "@components/PreviewBanner";
 
 export default function MainLayout(props) {
-  const { preview } = props;
+  const { preview, logo } = props;
   return (
     <>
       {preview && <PreviewBanner />}
-      <Header />
+      <Header logo={logo} />
       <main>{props.children}</main>
       <Footer />
 

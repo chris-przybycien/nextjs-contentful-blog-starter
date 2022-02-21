@@ -99,12 +99,76 @@ export default class ContentfulApi {
               }
             }
           }
+          formCollection(limit: 3) {
+            items {
+              ... on Form {
+                formTitle
+                formDescription {
+              		json
+                  links {
+                    entries {
+                      inline {
+                        sys {
+                          id
+                        }
+                        __typename
+                        ... on BlogPost {
+                          title
+                          slug
+                        }
+                      }
+                      block {
+                        sys {
+                          id
+                        }
+                        __typename
+                        ... on VideoEmbed {
+                          title
+                          embedUrl
+                        }
+                        ... on CodeBlock {
+                          description
+                          language
+                          code
+                        }
+                      }
+                    }
+                    assets {
+                      block {
+                        sys {
+                          id
+                        }
+                        url
+                        title
+                        width
+                        height
+                        description
+                      }
+                    }
+                  }
+                }
+                formFieldsCollection(limit: 10) {
+    		          items {
+        		        title
+            		    placeholder
+              		}
+                }
+              	submitButton
+              }
+            }
+          }
+          logo {
+            url
+            title
+            width
+            height
+            description
+          }
         }
       }
     }`;
 
     const response = await this.callContentful(query, variables, options);
-    console.log(response)
     const pageContent = response.data.pageContentCollection.items
       ? response.data.pageContentCollection.items
       : [];
